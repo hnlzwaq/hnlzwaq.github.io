@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>明月•今朝 | 明月•今朝</title><meta name="author" content="Wang anqing"><meta name="copyright" content="Wang anqing"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="#1 明月调试  该软件是为Java开发人员提供的JVM远程调试代理工具 基于JVM本身的远程调试功能 避免对JVM侵入式设置agent 只需开启JVM远程调试端口 重新封装调试命令  屏蔽危险调试命令  长时间调试防呆 支持内网、外网调试 有效避免JVM调试端口暴漏到外网 临时阻止他人调试某一个JVM 增加多用户管理、多JVM分组管理   该软件由客户端和服务端两部分组成 该软件采用saas的部">
+<meta property="og:type" content="article">
+<meta property="og:title" content="明月•今朝">
+<meta property="og:url" content="https://mingyue.today/2023/02/27/debug-readme/index.html">
+<meta property="og:site_name" content="明月•今朝">
+<meta property="og:description" content="#1 明月调试  该软件是为Java开发人员提供的JVM远程调试代理工具 基于JVM本身的远程调试功能 避免对JVM侵入式设置agent 只需开启JVM远程调试端口 重新封装调试命令  屏蔽危险调试命令  长时间调试防呆 支持内网、外网调试 有效避免JVM调试端口暴漏到外网 临时阻止他人调试某一个JVM 增加多用户管理、多JVM分组管理   该软件由客户端和服务端两部分组成 该软件采用saas的部">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2023-02-27T15:31:23.719Z">
+<meta property="article:modified_time" content="2023-02-28T01:08:49.855Z">
+<meta property="article:author" content="Wang anqing">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://mingyue.today/2023/02/27/debug-readme/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '明月•今朝',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-02-28 09:08:49'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"><link rel="alternate" href="/atom.xml" title="明月•今朝" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://hnlzwaq.github.io"><i class="fa-fw fas fa-link"></i><span> Github</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://hnlzwaq.gitee.io"><i class="fa-fw fas fa-link"></i><span> Gitee</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://effortless-panda-50bb23.netlify.app"><i class="fa-fw fas fa-link"></i><span> NetLify</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="明月•今朝"></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://hnlzwaq.github.io"><i class="fa-fw fas fa-link"></i><span> Github</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://hnlzwaq.gitee.io"><i class="fa-fw fas fa-link"></i><span> Gitee</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://effortless-panda-50bb23.netlify.app"><i class="fa-fw fas fa-link"></i><span> NetLify</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-02-27T15:31:23.719Z" title="发表于 2023-02-27 23:31:23">2023-02-27</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-02-28T01:08:49.855Z" title="更新于 2023-02-28 09:08:49">2023-02-28</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><p>#1 明月调试</p>
+<ul>
+<li>该软件是为Java开发人员提供的JVM远程调试代理工具<ul>
+<li>基于JVM本身的远程调试功能</li>
+<li>避免对JVM侵入式设置agent</li>
+<li>只需开启JVM远程调试端口</li>
+<li>重新封装调试命令 </li>
+<li>屏蔽危险调试命令 </li>
+<li>长时间调试防呆</li>
+<li>支持内网、外网调试</li>
+<li>有效避免JVM调试端口暴漏到外网</li>
+<li>临时阻止他人调试某一个JVM</li>
+<li>增加多用户管理、多JVM分组管理</li>
+</ul>
+</li>
+<li>该软件由客户端和服务端两部分组成</li>
+<li>该软件采用saas的部署方式（同时支持私有云的部署方式）<ul>
+<li>联系电话和微信号：13681736659</li>
+<li>微信群：<img src="/../images/debug-readme/wx-qr.jpg" alt="blockchain"></li>
+</ul>
+</li>
+<li>该软件采用低收费模式，不会给开发人员和技术公司带来经济负担</li>
+</ul>
+<p>#2 Java调试遇到的问题</p>
+<ul>
+<li>项目一般只在本地调试，部署后很难再被调试</li>
+<li>项目分布式部署后，即使可以远程调试，也很难找到对应的JVM</li>
+<li>遇到线上问题只能通过看log日志，如果没有加log日志则更麻烦</li>
+<li>生产环境安全第一的原则，更是无法进行直接调试</li>
+</ul>
+<p>#3 该软件解决这一切的问题</p>
+<ul>
+<li>解决分布式环境下对JVM无法调试的问题</li>
+<li>可以直接对生产环境远程调试，快速定位线上问题</li>
+<li>通过设置只读权限，阻止用户修改JVM中的变量</li>
+</ul>
+<p>#4 原理流程 </p>
+<ul>
+<li>正向调试流程 【IDE】–&gt;【客户端】–&gt;【服务端】–&gt;【JVM】 <ul>
+<li>1【IDE】发送调试命令到 【客户端】</li>
+<li>2【客户端】把命令转发到【服务端】</li>
+<li>3【服务端】最终把命令发送给【JVM】</li>
+</ul>
+</li>
+<li>反向通知流程 【IDE】&lt;–【客户端】&lt;–【服务端】&lt;–【JVM】 <ul>
+<li>1【JVM】发送调试事件到 【服务端】</li>
+<li>2【服务端】把事件转发到【客户端】</li>
+<li>3【客户端】最终把事件发送给【IDE】</li>
+</ul>
+</li>
+</ul>
+<p>#5 使用场景</p>
+<ul>
+<li>个人网站Java后台、公司大型网站Java后台</li>
+<li>传统项目架构、微服务架构</li>
+<li>多环境项目、多业务、多JVM、多开发人员、多角色</li>
+<li>软件使用架构<ul>
+<li>例图：<img src="/../images/debug-readme/use-arc.png" alt="blockchain"></li>
+</ul>
+</li>
+<li>节点配置架构<ul>
+<li>例图：<img src="/../images/debug-readme/node-arc.png" alt="blockchain"></li>
+</ul>
+</li>
+</ul>
+<p>#6 快速使用<br>##6.1下载、安装</p>
+<ul>
+<li>服务端 mingyue-debug-server<ul>
+<li>百度下载地址</li>
+<li>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1NjCKi4wPZPaEK8z7fT6LOg">https://pan.baidu.com/s/1NjCKi4wPZPaEK8z7fT6LOg</a></li>
+<li>提取码：myue</li>
+<li>下载windows 64 位，下一步安装完毕</li>
+</ul>
+</li>
+<li>客户端 mingyue-pc<ul>
+<li>百度下载地址 </li>
+<li>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1HdRvXKYjE4zHfoDAlYOREw">https://pan.baidu.com/s/1HdRvXKYjE4zHfoDAlYOREw</a> </li>
+<li>提取码：myue</li>
+<li>下载windows 64 位，下一步安装完毕</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-2-启动被调试【JVM】"><a href="#6-2-启动被调试【JVM】" class="headerlink" title="6.2 启动被调试【JVM】"></a>6.2 启动被调试【JVM】</h2><ul>
+<li>设置远程调试端口</li>
+<li>参数是：-Xdebug -Xrunjdwp:server&#x3D;y,transport&#x3D;dt_socket,address&#x3D;9000,suspend&#x3D;</li>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-set-jvm-port.png" alt="blockchain"></li>
+</ul>
+<h2 id="6-3-启动【服务端】获取服务id"><a href="#6-3-启动【服务端】获取服务id" class="headerlink" title="6.3 启动【服务端】获取服务id"></a>6.3 启动【服务端】获取服务id</h2><ul>
+<li>服务ID：【服务端】启动时产生的ID，在终端中复制该服务ID</li>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-debug-server-id.png" alt="blockchain"></li>
+</ul>
+<h2 id="6-4-启动【客户端】配置调试节点"><a href="#6-4-启动【客户端】配置调试节点" class="headerlink" title="6.4 启动【客户端】配置调试节点"></a>6.4 启动【客户端】配置调试节点</h2><h2 id="6-4-1-登录-，选择支付宝扫码登录"><a href="#6-4-1-登录-，选择支付宝扫码登录" class="headerlink" title="6.4.1 登录 ，选择支付宝扫码登录"></a>6.4.1 登录 ，选择支付宝扫码登录</h2><h2 id="6-4-2-购买JVM和服务端使用期限"><a href="#6-4-2-购买JVM和服务端使用期限" class="headerlink" title="6.4.2 购买JVM和服务端使用期限"></a>6.4.2 购买JVM和服务端使用期限</h2><ul>
+<li>打开自己的聊天窗口，点击调试小图标，点击购买图标，第一次需要<ul>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-buy.png" alt="blockchain"></li>
+</ul>
+</li>
+<li>查看购买列表 ，有购买的、有赠送的，第一次可以选择赠送<ul>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-order.png" alt="blockchain"></li>
+</ul>
+</li>
+<li>选择刚才生成的订单，点击使用<ul>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-use.png" alt="blockchain"></li>
+</ul>
+</li>
+<li>查看用订单列表<ul>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-use-2.png" alt="blockchain"></li>
+</ul>
+</li>
+<li>图中标题显示是虚拟机的使用天数 ，可以再重新选择购买调试服务器，最终如下图<ul>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-use-3.png" alt="blockchain"></li>
+</ul>
+</li>
+</ul>
+<h2 id="6-4-3-增加分组"><a href="#6-4-3-增加分组" class="headerlink" title="6.4.3 增加分组"></a>6.4.3 增加分组</h2><ul>
+<li>空白处单击右键选择【新增】，节点类型选择分组，输入名称点击确定，多增加几个分组</li>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-group.png" alt="blockchain"></li>
+</ul>
+<h2 id="6-4-4-增加【服务端】节点"><a href="#6-4-4-增加【服务端】节点" class="headerlink" title="6.4.4 增加【服务端】节点"></a>6.4.4 增加【服务端】节点</h2><ul>
+<li>选择一个分组，单击右键选择【新增】，节点选择【服务端】，设置ip、端口和服务id</li>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-server-add-2.png" alt="blockchain"></li>
+</ul>
+<h2 id="6-4-5-增加【JVM】节点，设置ip、端口"><a href="#6-4-5-增加【JVM】节点，设置ip、端口" class="headerlink" title="6.4.5 增加【JVM】节点，设置ip、端口"></a>6.4.5 增加【JVM】节点，设置ip、端口</h2><ul>
+<li>选择一个分组，单击右键选择【新增】，节点选择【虚拟机】，设置ip、端口和本地调试端口</li>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-jvm-node.png" alt="blockchain"></li>
+</ul>
+<h2 id="6-4-6-启动服务"><a href="#6-4-6-启动服务" class="headerlink" title="6.4.6 启动服务"></a>6.4.6 启动服务</h2><ul>
+<li>启动远程调试服务 ，选择服务端节点，单击右键选择【启动(远程)】 </li>
+<li>启动本地调试服务 ，选择服务端节点，单击右键选择【启动(本地)】 </li>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-chat-debug-status.png" alt="blockchain"></li>
+<li>复制本地调试JVM的本地端口</li>
+</ul>
+<h2 id="6-5-在【IDE】设置远程调试端口"><a href="#6-5-在【IDE】设置远程调试端口" class="headerlink" title="6.5 在【IDE】设置远程调试端口"></a>6.5 在【IDE】设置远程调试端口</h2><ul>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-debug-ide.png" alt="blockchain"></li>
+<li>在【IDE】中启动调试</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://mingyue.today">Wang anqing</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://mingyue.today/2023/02/27/debug-readme/">https://mingyue.today/2023/02/27/debug-readme/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://mingyue.today" target="_blank">明月•今朝</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2023/02/27/debug-manual/" title=""><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info"></div></div></a></div><div class="next-post pull-right"><a href="/2023/02/27/garden-readme/" title=""><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">下一篇</div><div class="next_info"></div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Wang anqing</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">6</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#6-2-%E5%90%AF%E5%8A%A8%E8%A2%AB%E8%B0%83%E8%AF%95%E3%80%90JVM%E3%80%91"><span class="toc-number">1.</span> <span class="toc-text">6.2 启动被调试【JVM】</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-3-%E5%90%AF%E5%8A%A8%E3%80%90%E6%9C%8D%E5%8A%A1%E7%AB%AF%E3%80%91%E8%8E%B7%E5%8F%96%E6%9C%8D%E5%8A%A1id"><span class="toc-number">2.</span> <span class="toc-text">6.3 启动【服务端】获取服务id</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-%E5%90%AF%E5%8A%A8%E3%80%90%E5%AE%A2%E6%88%B7%E7%AB%AF%E3%80%91%E9%85%8D%E7%BD%AE%E8%B0%83%E8%AF%95%E8%8A%82%E7%82%B9"><span class="toc-number">3.</span> <span class="toc-text">6.4 启动【客户端】配置调试节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-1-%E7%99%BB%E5%BD%95-%EF%BC%8C%E9%80%89%E6%8B%A9%E6%94%AF%E4%BB%98%E5%AE%9D%E6%89%AB%E7%A0%81%E7%99%BB%E5%BD%95"><span class="toc-number">4.</span> <span class="toc-text">6.4.1 登录 ，选择支付宝扫码登录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-2-%E8%B4%AD%E4%B9%B0JVM%E5%92%8C%E6%9C%8D%E5%8A%A1%E7%AB%AF%E4%BD%BF%E7%94%A8%E6%9C%9F%E9%99%90"><span class="toc-number">5.</span> <span class="toc-text">6.4.2 购买JVM和服务端使用期限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-3-%E5%A2%9E%E5%8A%A0%E5%88%86%E7%BB%84"><span class="toc-number">6.</span> <span class="toc-text">6.4.3 增加分组</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-4-%E5%A2%9E%E5%8A%A0%E3%80%90%E6%9C%8D%E5%8A%A1%E7%AB%AF%E3%80%91%E8%8A%82%E7%82%B9"><span class="toc-number">7.</span> <span class="toc-text">6.4.4 增加【服务端】节点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-5-%E5%A2%9E%E5%8A%A0%E3%80%90JVM%E3%80%91%E8%8A%82%E7%82%B9%EF%BC%8C%E8%AE%BE%E7%BD%AEip%E3%80%81%E7%AB%AF%E5%8F%A3"><span class="toc-number">8.</span> <span class="toc-text">6.4.5 增加【JVM】节点，设置ip、端口</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-4-6-%E5%90%AF%E5%8A%A8%E6%9C%8D%E5%8A%A1"><span class="toc-number">9.</span> <span class="toc-text">6.4.6 启动服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-5-%E5%9C%A8%E3%80%90IDE%E3%80%91%E8%AE%BE%E7%BD%AE%E8%BF%9C%E7%A8%8B%E8%B0%83%E8%AF%95%E7%AB%AF%E5%8F%A3"><span class="toc-number">10.</span> <span class="toc-text">6.5 在【IDE】设置远程调试端口</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/02/27/debug-manual/" title="无题">无题</a><time datetime="2023-02-27T15:31:23.729Z" title="发表于 2023-02-27 23:31:23">2023-02-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/02/27/debug-readme/" title="无题">无题</a><time datetime="2023-02-27T15:31:23.719Z" title="发表于 2023-02-27 23:31:23">2023-02-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/02/27/garden-readme/" title="无题">无题</a><time datetime="2023-02-27T13:08:24.872Z" title="发表于 2023-02-27 21:08:24">2023-02-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/02/27/garden-manual/" title="无题">无题</a><time datetime="2023-02-27T13:08:24.861Z" title="发表于 2023-02-27 21:08:24">2023-02-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/02/27/page-star-readme/" title="无题">无题</a><time datetime="2023-02-27T13:08:24.603Z" title="发表于 2023-02-27 21:08:24">2023-02-27</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Wang anqing</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
