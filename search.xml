@@ -2,6 +2,60 @@
 <search>
   <entry>
     <title></title>
+    <url>/2023/02/27/garden-readme/</url>
+    <content><![CDATA[<h1 id="概要说明"><a href="#概要说明" class="headerlink" title="概要说明"></a>概要说明</h1><p>明月花园</p>
+<p>这是一个活动交易平台</p>
+<p>提供多种多样的活动类型</p>
+<p>提供完善的交易流程管理</p>
+<p>活动流程：</p>
+<p>1.发布活动</p>
+<p>2.等待参与者</p>
+<p>3.审核参与者</p>
+<p>4.活动开始</p>
+<p>5.活动结束</p>
+<p>6.系统自动结算</p>
+<p>7.个人提现</p>
+<p>活动费用分类：</p>
+<p>1.免费活动</p>
+<p>2.收费活动，参与者付费</p>
+<p>3.悬赏活动，发起者付费</p>
+<p>活动费用规则：</p>
+<p>1.活动费用由发起者制定</p>
+<p>2.收费活动由参与者支付</p>
+<p>3.悬赏活动由发起者支付</p>
+<p>4.活动结束后2天内可以申请退款</p>
+<p>5.活动结束2后系统进行结算</p>
+<p>6.没有发生实际退款的活动，才可以进行结算</p>
+<p>7.实际收费金额&#x3D;实际支付金额—平台收费金额</p>
+<p>8.平台收费金额&#x3D;实际支付金额✕收费比例</p>
+<p>9.目前平台收费比例是30%</p>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/02/27/garden-manual/</url>
+    <content><![CDATA[<h1 id="操作手册"><a href="#操作手册" class="headerlink" title="操作手册"></a>操作手册</h1><h2 id="发布活动"><a href="#发布活动" class="headerlink" title="发布活动"></a>发布活动</h2><ul>
+<li>例图：<img src="/../images/garden-manual/publish.png" alt="blockchain"></li>
+</ul>
+<h2 id="活动列表"><a href="#活动列表" class="headerlink" title="活动列表"></a>活动列表</h2><ul>
+<li>例图：<img src="/../images/garden-manual/garden.png" alt="blockchain"></li>
+</ul>
+<h2 id="联系人"><a href="#联系人" class="headerlink" title="联系人"></a>联系人</h2><ul>
+<li>例图：<img src="/../images/garden-manual/concat.png" alt="blockchain"></li>
+</ul>
+<h2 id="消息"><a href="#消息" class="headerlink" title="消息"></a>消息</h2><ul>
+<li>例图：<img src="/../images/garden-manual/message.png" alt="blockchain"></li>
+</ul>
+<h2 id="聊天"><a href="#聊天" class="headerlink" title="聊天"></a>聊天</h2><ul>
+<li>例图：<img src="/../images/garden-manual/chat.png" alt="blockchain"></li>
+</ul>
+<h2 id="个人"><a href="#个人" class="headerlink" title="个人"></a>个人</h2><ul>
+<li>例图：<img src="/../images/garden-manual/me.png" alt="blockchain"></li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
     <url>/2023/02/27/debug-readme/</url>
     <content><![CDATA[<p>#1 明月调试</p>
 <ul>
@@ -601,60 +655,6 @@
 </ul>
 </li>
 </ul>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2023/02/27/garden-manual/</url>
-    <content><![CDATA[<h1 id="操作手册"><a href="#操作手册" class="headerlink" title="操作手册"></a>操作手册</h1><h2 id="发布活动"><a href="#发布活动" class="headerlink" title="发布活动"></a>发布活动</h2><ul>
-<li>例图：<img src="/../images/garden-manual/publish.png" alt="blockchain"></li>
-</ul>
-<h2 id="活动列表"><a href="#活动列表" class="headerlink" title="活动列表"></a>活动列表</h2><ul>
-<li>例图：<img src="/../images/garden-manual/garden.png" alt="blockchain"></li>
-</ul>
-<h2 id="联系人"><a href="#联系人" class="headerlink" title="联系人"></a>联系人</h2><ul>
-<li>例图：<img src="/../images/garden-manual/concat.png" alt="blockchain"></li>
-</ul>
-<h2 id="消息"><a href="#消息" class="headerlink" title="消息"></a>消息</h2><ul>
-<li>例图：<img src="/../images/garden-manual/message.png" alt="blockchain"></li>
-</ul>
-<h2 id="聊天"><a href="#聊天" class="headerlink" title="聊天"></a>聊天</h2><ul>
-<li>例图：<img src="/../images/garden-manual/chat.png" alt="blockchain"></li>
-</ul>
-<h2 id="个人"><a href="#个人" class="headerlink" title="个人"></a>个人</h2><ul>
-<li>例图：<img src="/../images/garden-manual/me.png" alt="blockchain"></li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2023/02/27/garden-readme/</url>
-    <content><![CDATA[<h1 id="概要说明"><a href="#概要说明" class="headerlink" title="概要说明"></a>概要说明</h1><p>明月花园</p>
-<p>这是一个活动交易平台</p>
-<p>提供多种多样的活动类型</p>
-<p>提供完善的交易流程管理</p>
-<p>活动流程：</p>
-<p>1.发布活动</p>
-<p>2.等待参与者</p>
-<p>3.审核参与者</p>
-<p>4.活动开始</p>
-<p>5.活动结束</p>
-<p>6.系统自动结算</p>
-<p>7.个人提现</p>
-<p>活动费用分类：</p>
-<p>1.免费活动</p>
-<p>2.收费活动，参与者付费</p>
-<p>3.悬赏活动，发起者付费</p>
-<p>活动费用规则：</p>
-<p>1.活动费用由发起者制定</p>
-<p>2.收费活动由参与者支付</p>
-<p>3.悬赏活动由发起者支付</p>
-<p>4.活动结束后2天内可以申请退款</p>
-<p>5.活动结束2后系统进行结算</p>
-<p>6.没有发生实际退款的活动，才可以进行结算</p>
-<p>7.实际收费金额&#x3D;实际支付金额—平台收费金额</p>
-<p>8.平台收费金额&#x3D;实际支付金额✕收费比例</p>
-<p>9.目前平台收费比例是30%</p>
 ]]></content>
   </entry>
   <entry>
