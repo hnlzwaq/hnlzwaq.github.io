@@ -2,177 +2,6 @@
 <search>
   <entry>
     <title></title>
-    <url>/2023/02/27/debug-readme/</url>
-    <content><![CDATA[<p>#1 明月调试</p>
-<ul>
-<li>该软件是为Java开发人员提供的JVM远程调试代理工具<ul>
-<li>基于JVM本身的远程调试功能</li>
-<li>避免对JVM侵入式设置agent</li>
-<li>只需开启JVM远程调试端口</li>
-<li>重新封装调试命令 </li>
-<li>屏蔽危险调试命令 </li>
-<li>长时间调试防呆</li>
-<li>支持内网、外网调试</li>
-<li>有效避免JVM调试端口暴漏到外网</li>
-<li>临时阻止他人调试某一个JVM</li>
-<li>增加多用户管理、多JVM分组管理</li>
-</ul>
-</li>
-<li>该软件由客户端和服务端两部分组成</li>
-<li>该软件采用saas的部署方式（同时支持私有云的部署方式）<ul>
-<li>联系电话和微信号：13681736659</li>
-<li>微信群：<img src="/../images/debug-readme/wx-qr.jpg" alt="blockchain"></li>
-</ul>
-</li>
-<li>该软件采用低收费模式，不会给开发人员和技术公司带来经济负担</li>
-</ul>
-<p>#2 Java调试遇到的问题</p>
-<ul>
-<li>项目一般只在本地调试，部署后很难再被调试</li>
-<li>项目分布式部署后，即使可以远程调试，也很难找到对应的JVM</li>
-<li>遇到线上问题只能通过看log日志，如果没有加log日志则更麻烦</li>
-<li>生产环境安全第一的原则，更是无法进行直接调试</li>
-</ul>
-<p>#3 该软件解决这一切的问题</p>
-<ul>
-<li>解决分布式环境下对JVM无法调试的问题</li>
-<li>可以直接对生产环境远程调试，快速定位线上问题</li>
-<li>通过设置只读权限，阻止用户修改JVM中的变量</li>
-</ul>
-<p>#4 原理流程 </p>
-<ul>
-<li>正向调试流程 【IDE】–&gt;【客户端】–&gt;【服务端】–&gt;【JVM】 <ul>
-<li>1【IDE】发送调试命令到 【客户端】</li>
-<li>2【客户端】把命令转发到【服务端】</li>
-<li>3【服务端】最终把命令发送给【JVM】</li>
-</ul>
-</li>
-<li>反向通知流程 【IDE】&lt;–【客户端】&lt;–【服务端】&lt;–【JVM】 <ul>
-<li>1【JVM】发送调试事件到 【服务端】</li>
-<li>2【服务端】把事件转发到【客户端】</li>
-<li>3【客户端】最终把事件发送给【IDE】</li>
-</ul>
-</li>
-</ul>
-<p>#5 使用场景</p>
-<ul>
-<li>个人网站Java后台、公司大型网站Java后台</li>
-<li>传统项目架构、微服务架构</li>
-<li>多环境项目、多业务、多JVM、多开发人员、多角色</li>
-<li>软件使用架构<ul>
-<li>例图：<img src="/../images/debug-readme/use-arc.png" alt="blockchain"></li>
-</ul>
-</li>
-<li>节点配置架构<ul>
-<li>例图：<img src="/../images/debug-readme/node-arc.png" alt="blockchain"></li>
-</ul>
-</li>
-</ul>
-<p>#6 快速使用<br>##6.1下载、安装</p>
-<ul>
-<li>服务端 mingyue-debug-server<ul>
-<li>百度下载地址</li>
-<li>链接：<a href="https://pan.baidu.com/s/1NjCKi4wPZPaEK8z7fT6LOg">https://pan.baidu.com/s/1NjCKi4wPZPaEK8z7fT6LOg</a></li>
-<li>提取码：myue</li>
-<li>下载windows 64 位，下一步安装完毕</li>
-</ul>
-</li>
-<li>客户端 mingyue-pc<ul>
-<li>百度下载地址 </li>
-<li>链接：<a href="https://pan.baidu.com/s/1HdRvXKYjE4zHfoDAlYOREw">https://pan.baidu.com/s/1HdRvXKYjE4zHfoDAlYOREw</a> </li>
-<li>提取码：myue</li>
-<li>下载windows 64 位，下一步安装完毕</li>
-</ul>
-</li>
-</ul>
-<h2 id="6-2-启动被调试【JVM】"><a href="#6-2-启动被调试【JVM】" class="headerlink" title="6.2 启动被调试【JVM】"></a>6.2 启动被调试【JVM】</h2><ul>
-<li>设置远程调试端口</li>
-<li>参数是：-Xdebug -Xrunjdwp:server&#x3D;y,transport&#x3D;dt_socket,address&#x3D;9000,suspend&#x3D;</li>
-<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-set-jvm-port.png" alt="blockchain"></li>
-</ul>
-<h2 id="6-3-启动【服务端】获取服务id"><a href="#6-3-启动【服务端】获取服务id" class="headerlink" title="6.3 启动【服务端】获取服务id"></a>6.3 启动【服务端】获取服务id</h2><ul>
-<li>服务ID：【服务端】启动时产生的ID，在终端中复制该服务ID</li>
-<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-debug-server-id.png" alt="blockchain"></li>
-</ul>
-<h2 id="6-4-启动【客户端】配置调试节点"><a href="#6-4-启动【客户端】配置调试节点" class="headerlink" title="6.4 启动【客户端】配置调试节点"></a>6.4 启动【客户端】配置调试节点</h2><h2 id="6-4-1-登录-，选择支付宝扫码登录"><a href="#6-4-1-登录-，选择支付宝扫码登录" class="headerlink" title="6.4.1 登录 ，选择支付宝扫码登录"></a>6.4.1 登录 ，选择支付宝扫码登录</h2><h2 id="6-4-2-购买JVM和服务端使用期限"><a href="#6-4-2-购买JVM和服务端使用期限" class="headerlink" title="6.4.2 购买JVM和服务端使用期限"></a>6.4.2 购买JVM和服务端使用期限</h2><ul>
-<li>打开自己的聊天窗口，点击调试小图标，点击购买图标，第一次需要<ul>
-<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-buy.png" alt="blockchain"></li>
-</ul>
-</li>
-<li>查看购买列表 ，有购买的、有赠送的，第一次可以选择赠送<ul>
-<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-order.png" alt="blockchain"></li>
-</ul>
-</li>
-<li>选择刚才生成的订单，点击使用<ul>
-<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-use.png" alt="blockchain"></li>
-</ul>
-</li>
-<li>查看用订单列表<ul>
-<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-use-2.png" alt="blockchain"></li>
-</ul>
-</li>
-<li>图中标题显示是虚拟机的使用天数 ，可以再重新选择购买调试服务器，最终如下图<ul>
-<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-use-3.png" alt="blockchain"></li>
-</ul>
-</li>
-</ul>
-<h2 id="6-4-3-增加分组"><a href="#6-4-3-增加分组" class="headerlink" title="6.4.3 增加分组"></a>6.4.3 增加分组</h2><ul>
-<li>空白处单击右键选择【新增】，节点类型选择分组，输入名称点击确定，多增加几个分组</li>
-<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-group.png" alt="blockchain"></li>
-</ul>
-<h2 id="6-4-4-增加【服务端】节点"><a href="#6-4-4-增加【服务端】节点" class="headerlink" title="6.4.4 增加【服务端】节点"></a>6.4.4 增加【服务端】节点</h2><ul>
-<li>选择一个分组，单击右键选择【新增】，节点选择【服务端】，设置ip、端口和服务id</li>
-<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-server-add-2.png" alt="blockchain"></li>
-</ul>
-<h2 id="6-4-5-增加【JVM】节点，设置ip、端口"><a href="#6-4-5-增加【JVM】节点，设置ip、端口" class="headerlink" title="6.4.5 增加【JVM】节点，设置ip、端口"></a>6.4.5 增加【JVM】节点，设置ip、端口</h2><ul>
-<li>选择一个分组，单击右键选择【新增】，节点选择【虚拟机】，设置ip、端口和本地调试端口</li>
-<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-jvm-node.png" alt="blockchain"></li>
-</ul>
-<h2 id="6-4-6-启动服务"><a href="#6-4-6-启动服务" class="headerlink" title="6.4.6 启动服务"></a>6.4.6 启动服务</h2><ul>
-<li>启动远程调试服务 ，选择服务端节点，单击右键选择【启动(远程)】 </li>
-<li>启动本地调试服务 ，选择服务端节点，单击右键选择【启动(本地)】 </li>
-<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-chat-debug-status.png" alt="blockchain"></li>
-<li>复制本地调试JVM的本地端口</li>
-</ul>
-<h2 id="6-5-在【IDE】设置远程调试端口"><a href="#6-5-在【IDE】设置远程调试端口" class="headerlink" title="6.5 在【IDE】设置远程调试端口"></a>6.5 在【IDE】设置远程调试端口</h2><ul>
-<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-debug-ide.png" alt="blockchain"></li>
-<li>在【IDE】中启动调试</li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
-    <url>/2023/02/27/garden-readme/</url>
-    <content><![CDATA[<h1 id="概要说明"><a href="#概要说明" class="headerlink" title="概要说明"></a>概要说明</h1><p>明月花园</p>
-<p>这是一个活动交易平台</p>
-<p>提供多种多样的活动类型</p>
-<p>提供完善的交易流程管理</p>
-<p>活动流程：</p>
-<p>1.发布活动</p>
-<p>2.等待参与者</p>
-<p>3.审核参与者</p>
-<p>4.活动开始</p>
-<p>5.活动结束</p>
-<p>6.系统自动结算</p>
-<p>7.个人提现</p>
-<p>活动费用分类：</p>
-<p>1.免费活动</p>
-<p>2.收费活动，参与者付费</p>
-<p>3.悬赏活动，发起者付费</p>
-<p>活动费用规则：</p>
-<p>1.活动费用由发起者制定</p>
-<p>2.收费活动由参与者支付</p>
-<p>3.悬赏活动由发起者支付</p>
-<p>4.活动结束后2天内可以申请退款</p>
-<p>5.活动结束2后系统进行结算</p>
-<p>6.没有发生实际退款的活动，才可以进行结算</p>
-<p>7.实际收费金额&#x3D;实际支付金额—平台收费金额</p>
-<p>8.平台收费金额&#x3D;实际支付金额✕收费比例</p>
-<p>9.目前平台收费比例是30%</p>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
     <url>/2023/02/27/debug-manual/</url>
     <content><![CDATA[<p>#1 调试服务端<br>##1.1 下载</p>
 <ul>
@@ -659,10 +488,173 @@
   </entry>
   <entry>
     <title></title>
-    <url>/2023/02/27/page-star-readme/</url>
-    <content><![CDATA[<h1 id="概要说明"><a href="#概要说明" class="headerlink" title="概要说明"></a>概要说明</h1><p>页面点赞</p>
-<p>这是一个轻量级、浏览器插件、社交平台</p>
-<p>浏览页面时，点赞、发表评论、聊天、捡瓶子</p>
+    <url>/2023/02/27/debug-readme/</url>
+    <content><![CDATA[<p>#1 明月调试</p>
+<ul>
+<li>该软件是为Java开发人员提供的JVM远程调试代理工具<ul>
+<li>基于JVM本身的远程调试功能</li>
+<li>避免对JVM侵入式设置agent</li>
+<li>只需开启JVM远程调试端口</li>
+<li>重新封装调试命令 </li>
+<li>屏蔽危险调试命令 </li>
+<li>长时间调试防呆</li>
+<li>支持内网、外网调试</li>
+<li>有效避免JVM调试端口暴漏到外网</li>
+<li>临时阻止他人调试某一个JVM</li>
+<li>增加多用户管理、多JVM分组管理</li>
+</ul>
+</li>
+<li>该软件由客户端和服务端两部分组成</li>
+<li>该软件采用saas的部署方式（同时支持私有云的部署方式）<ul>
+<li>联系电话和微信号：13681736659</li>
+<li>微信群：<img src="/../images/debug-readme/wx-qr.jpg" alt="blockchain"></li>
+</ul>
+</li>
+<li>该软件采用低收费模式，不会给开发人员和技术公司带来经济负担</li>
+</ul>
+<p>#2 Java调试遇到的问题</p>
+<ul>
+<li>项目一般只在本地调试，部署后很难再被调试</li>
+<li>项目分布式部署后，即使可以远程调试，也很难找到对应的JVM</li>
+<li>遇到线上问题只能通过看log日志，如果没有加log日志则更麻烦</li>
+<li>生产环境安全第一的原则，更是无法进行直接调试</li>
+</ul>
+<p>#3 该软件解决这一切的问题</p>
+<ul>
+<li>解决分布式环境下对JVM无法调试的问题</li>
+<li>可以直接对生产环境远程调试，快速定位线上问题</li>
+<li>通过设置只读权限，阻止用户修改JVM中的变量</li>
+</ul>
+<p>#4 原理流程 </p>
+<ul>
+<li>正向调试流程 【IDE】–&gt;【客户端】–&gt;【服务端】–&gt;【JVM】 <ul>
+<li>1【IDE】发送调试命令到 【客户端】</li>
+<li>2【客户端】把命令转发到【服务端】</li>
+<li>3【服务端】最终把命令发送给【JVM】</li>
+</ul>
+</li>
+<li>反向通知流程 【IDE】&lt;–【客户端】&lt;–【服务端】&lt;–【JVM】 <ul>
+<li>1【JVM】发送调试事件到 【服务端】</li>
+<li>2【服务端】把事件转发到【客户端】</li>
+<li>3【客户端】最终把事件发送给【IDE】</li>
+</ul>
+</li>
+</ul>
+<p>#5 使用场景</p>
+<ul>
+<li>个人网站Java后台、公司大型网站Java后台</li>
+<li>传统项目架构、微服务架构</li>
+<li>多环境项目、多业务、多JVM、多开发人员、多角色</li>
+<li>软件使用架构<ul>
+<li>例图：<img src="/../images/debug-readme/use-arc.png" alt="blockchain"></li>
+</ul>
+</li>
+<li>节点配置架构<ul>
+<li>例图：<img src="/../images/debug-readme/node-arc.png" alt="blockchain"></li>
+</ul>
+</li>
+</ul>
+<p>#6 快速使用<br>##6.1下载、安装</p>
+<ul>
+<li>服务端 mingyue-debug-server<ul>
+<li>百度下载地址</li>
+<li>链接：<a href="https://pan.baidu.com/s/1NjCKi4wPZPaEK8z7fT6LOg">https://pan.baidu.com/s/1NjCKi4wPZPaEK8z7fT6LOg</a></li>
+<li>提取码：myue</li>
+<li>下载windows 64 位，下一步安装完毕</li>
+</ul>
+</li>
+<li>客户端 mingyue-pc<ul>
+<li>百度下载地址 </li>
+<li>链接：<a href="https://pan.baidu.com/s/1HdRvXKYjE4zHfoDAlYOREw">https://pan.baidu.com/s/1HdRvXKYjE4zHfoDAlYOREw</a> </li>
+<li>提取码：myue</li>
+<li>下载windows 64 位，下一步安装完毕</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-2-启动被调试【JVM】"><a href="#6-2-启动被调试【JVM】" class="headerlink" title="6.2 启动被调试【JVM】"></a>6.2 启动被调试【JVM】</h2><ul>
+<li>设置远程调试端口</li>
+<li>参数是：-Xdebug -Xrunjdwp:server&#x3D;y,transport&#x3D;dt_socket,address&#x3D;9000,suspend&#x3D;</li>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-set-jvm-port.png" alt="blockchain"></li>
+</ul>
+<h2 id="6-3-启动【服务端】获取服务id"><a href="#6-3-启动【服务端】获取服务id" class="headerlink" title="6.3 启动【服务端】获取服务id"></a>6.3 启动【服务端】获取服务id</h2><ul>
+<li>服务ID：【服务端】启动时产生的ID，在终端中复制该服务ID</li>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-debug-server-id.png" alt="blockchain"></li>
+</ul>
+<h2 id="6-4-启动【客户端】配置调试节点"><a href="#6-4-启动【客户端】配置调试节点" class="headerlink" title="6.4 启动【客户端】配置调试节点"></a>6.4 启动【客户端】配置调试节点</h2><h2 id="6-4-1-登录-，选择支付宝扫码登录"><a href="#6-4-1-登录-，选择支付宝扫码登录" class="headerlink" title="6.4.1 登录 ，选择支付宝扫码登录"></a>6.4.1 登录 ，选择支付宝扫码登录</h2><h2 id="6-4-2-购买JVM和服务端使用期限"><a href="#6-4-2-购买JVM和服务端使用期限" class="headerlink" title="6.4.2 购买JVM和服务端使用期限"></a>6.4.2 购买JVM和服务端使用期限</h2><ul>
+<li>打开自己的聊天窗口，点击调试小图标，点击购买图标，第一次需要<ul>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-buy.png" alt="blockchain"></li>
+</ul>
+</li>
+<li>查看购买列表 ，有购买的、有赠送的，第一次可以选择赠送<ul>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-order.png" alt="blockchain"></li>
+</ul>
+</li>
+<li>选择刚才生成的订单，点击使用<ul>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-use.png" alt="blockchain"></li>
+</ul>
+</li>
+<li>查看用订单列表<ul>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-use-2.png" alt="blockchain"></li>
+</ul>
+</li>
+<li>图中标题显示是虚拟机的使用天数 ，可以再重新选择购买调试服务器，最终如下图<ul>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-use-3.png" alt="blockchain"></li>
+</ul>
+</li>
+</ul>
+<h2 id="6-4-3-增加分组"><a href="#6-4-3-增加分组" class="headerlink" title="6.4.3 增加分组"></a>6.4.3 增加分组</h2><ul>
+<li>空白处单击右键选择【新增】，节点类型选择分组，输入名称点击确定，多增加几个分组</li>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-group.png" alt="blockchain"></li>
+</ul>
+<h2 id="6-4-4-增加【服务端】节点"><a href="#6-4-4-增加【服务端】节点" class="headerlink" title="6.4.4 增加【服务端】节点"></a>6.4.4 增加【服务端】节点</h2><ul>
+<li>选择一个分组，单击右键选择【新增】，节点选择【服务端】，设置ip、端口和服务id</li>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-server-add-2.png" alt="blockchain"></li>
+</ul>
+<h2 id="6-4-5-增加【JVM】节点，设置ip、端口"><a href="#6-4-5-增加【JVM】节点，设置ip、端口" class="headerlink" title="6.4.5 增加【JVM】节点，设置ip、端口"></a>6.4.5 增加【JVM】节点，设置ip、端口</h2><ul>
+<li>选择一个分组，单击右键选择【新增】，节点选择【虚拟机】，设置ip、端口和本地调试端口</li>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-jvm-node.png" alt="blockchain"></li>
+</ul>
+<h2 id="6-4-6-启动服务"><a href="#6-4-6-启动服务" class="headerlink" title="6.4.6 启动服务"></a>6.4.6 启动服务</h2><ul>
+<li>启动远程调试服务 ，选择服务端节点，单击右键选择【启动(远程)】 </li>
+<li>启动本地调试服务 ，选择服务端节点，单击右键选择【启动(本地)】 </li>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-chat-debug-status.png" alt="blockchain"></li>
+<li>复制本地调试JVM的本地端口</li>
+</ul>
+<h2 id="6-5-在【IDE】设置远程调试端口"><a href="#6-5-在【IDE】设置远程调试端口" class="headerlink" title="6.5 在【IDE】设置远程调试端口"></a>6.5 在【IDE】设置远程调试端口</h2><ul>
+<li>例图：<img src="/../images/debug-manual/win-mingyue-pc-debug-ide.png" alt="blockchain"></li>
+<li>在【IDE】中启动调试</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/02/27/garden-readme/</url>
+    <content><![CDATA[<h1 id="概要说明"><a href="#概要说明" class="headerlink" title="概要说明"></a>概要说明</h1><p>明月花园</p>
+<p>这是一个活动交易平台</p>
+<p>提供多种多样的活动类型</p>
+<p>提供完善的交易流程管理</p>
+<p>活动流程：</p>
+<p>1.发布活动</p>
+<p>2.等待参与者</p>
+<p>3.审核参与者</p>
+<p>4.活动开始</p>
+<p>5.活动结束</p>
+<p>6.系统自动结算</p>
+<p>7.个人提现</p>
+<p>活动费用分类：</p>
+<p>1.免费活动</p>
+<p>2.收费活动，参与者付费</p>
+<p>3.悬赏活动，发起者付费</p>
+<p>活动费用规则：</p>
+<p>1.活动费用由发起者制定</p>
+<p>2.收费活动由参与者支付</p>
+<p>3.悬赏活动由发起者支付</p>
+<p>4.活动结束后2天内可以申请退款</p>
+<p>5.活动结束2后系统进行结算</p>
+<p>6.没有发生实际退款的活动，才可以进行结算</p>
+<p>7.实际收费金额&#x3D;实际支付金额—平台收费金额</p>
+<p>8.平台收费金额&#x3D;实际支付金额✕收费比例</p>
+<p>9.目前平台收费比例是30%</p>
 ]]></content>
   </entry>
   <entry>
@@ -686,6 +678,14 @@
 <h2 id="个人"><a href="#个人" class="headerlink" title="个人"></a>个人</h2><ul>
 <li>例图：<img src="/../images/page-star-manual/self.png" alt="blockchain"></li>
 </ul>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/02/27/page-star-readme/</url>
+    <content><![CDATA[<h1 id="概要说明"><a href="#概要说明" class="headerlink" title="概要说明"></a>概要说明</h1><p>页面点赞</p>
+<p>这是一个轻量级、浏览器插件、社交平台</p>
+<p>浏览页面时，点赞、发表评论、聊天、捡瓶子</p>
 ]]></content>
   </entry>
 </search>
