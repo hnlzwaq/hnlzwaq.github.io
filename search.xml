@@ -2,29 +2,6 @@
 <search>
   <entry>
     <title></title>
-    <url>/2023/02/27/garden-manual/</url>
-    <content><![CDATA[<h1 id="操作手册"><a href="#操作手册" class="headerlink" title="操作手册"></a>操作手册</h1><h2 id="发布活动"><a href="#发布活动" class="headerlink" title="发布活动"></a>发布活动</h2><ul>
-<li>例图：<img src="/../images/garden-manual/publish.png" alt="blockchain"></li>
-</ul>
-<h2 id="活动列表"><a href="#活动列表" class="headerlink" title="活动列表"></a>活动列表</h2><ul>
-<li>例图：<img src="/../images/garden-manual/garden.png" alt="blockchain"></li>
-</ul>
-<h2 id="联系人"><a href="#联系人" class="headerlink" title="联系人"></a>联系人</h2><ul>
-<li>例图：<img src="/../images/garden-manual/concat.png" alt="blockchain"></li>
-</ul>
-<h2 id="消息"><a href="#消息" class="headerlink" title="消息"></a>消息</h2><ul>
-<li>例图：<img src="/../images/garden-manual/message.png" alt="blockchain"></li>
-</ul>
-<h2 id="聊天"><a href="#聊天" class="headerlink" title="聊天"></a>聊天</h2><ul>
-<li>例图：<img src="/../images/garden-manual/chat.png" alt="blockchain"></li>
-</ul>
-<h2 id="个人"><a href="#个人" class="headerlink" title="个人"></a>个人</h2><ul>
-<li>例图：<img src="/../images/garden-manual/me.png" alt="blockchain"></li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title></title>
     <url>/2023/02/27/debug-manual/</url>
     <content><![CDATA[<p>#1 调试服务端<br>##1.1 下载</p>
 <ul>
@@ -623,6 +600,29 @@
 <h2 id="6-5-在【IDE】设置远程调试端口"><a href="#6-5-在【IDE】设置远程调试端口" class="headerlink" title="6.5 在【IDE】设置远程调试端口"></a>6.5 在【IDE】设置远程调试端口</h2><ul>
 <li>例图：<img src="/../images/debug-manual/win-mingyue-pc-debug-ide.png" alt="blockchain"></li>
 <li>在【IDE】中启动调试</li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title></title>
+    <url>/2023/02/27/garden-manual/</url>
+    <content><![CDATA[<h1 id="操作手册"><a href="#操作手册" class="headerlink" title="操作手册"></a>操作手册</h1><h2 id="发布活动"><a href="#发布活动" class="headerlink" title="发布活动"></a>发布活动</h2><ul>
+<li>例图：<img src="/../images/garden-manual/publish.png" alt="blockchain"></li>
+</ul>
+<h2 id="活动列表"><a href="#活动列表" class="headerlink" title="活动列表"></a>活动列表</h2><ul>
+<li>例图：<img src="/../images/garden-manual/garden.png" alt="blockchain"></li>
+</ul>
+<h2 id="联系人"><a href="#联系人" class="headerlink" title="联系人"></a>联系人</h2><ul>
+<li>例图：<img src="/../images/garden-manual/concat.png" alt="blockchain"></li>
+</ul>
+<h2 id="消息"><a href="#消息" class="headerlink" title="消息"></a>消息</h2><ul>
+<li>例图：<img src="/../images/garden-manual/message.png" alt="blockchain"></li>
+</ul>
+<h2 id="聊天"><a href="#聊天" class="headerlink" title="聊天"></a>聊天</h2><ul>
+<li>例图：<img src="/../images/garden-manual/chat.png" alt="blockchain"></li>
+</ul>
+<h2 id="个人"><a href="#个人" class="headerlink" title="个人"></a>个人</h2><ul>
+<li>例图：<img src="/../images/garden-manual/me.png" alt="blockchain"></li>
 </ul>
 ]]></content>
   </entry>
