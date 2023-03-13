@@ -1,3 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
+  <entry>
+    <title>openCV 统计黑色像素比例</title>
+    <url>/2023/03/13/opencv-black-ratio/</url>
+    <content><![CDATA[<p>openCV 统计黑色像素比例</p>
+]]></content>
+      <tags>
+        <tag>opencv</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openCV 拼接高清区域</title>
+    <url>/2023/03/13/opencv-stitch-hd-areas/</url>
+    <content><![CDATA[<p>openCV 拼接高清区域</p>
+]]></content>
+      <tags>
+        <tag>opencv</tag>
+      </tags>
+  </entry>
 </search>
