@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>openCV 统计黑色像素比例</title>
+    <url>/2023/03/13/opencv-black-ratio/</url>
+    <content><![CDATA[<h1 id="openCV-统计黑色像素比例"><a href="#openCV-统计黑色像素比例" class="headerlink" title="openCV 统计黑色像素比例"></a>openCV 统计黑色像素比例</h1><h2 id="图例"><a href="#图例" class="headerlink" title="图例"></a>图例</h2><img src="/2023/03/13/opencv-black-ratio/img_0.png" class="">
+<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
+<li>查找黑色区域轮廓</li>
+<li>计算轮廓内黑色占比</li>
+<li>如下图所示<img src="/2023/03/13/opencv-black-ratio/img_0-1.png" class=""></li>
+</ul>
+<h2 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h2><p>opencv python</p>
+<h2 id="索取"><a href="#索取" class="headerlink" title="索取"></a>索取</h2><ul>
+<li>提供python源代码</li>
+<li>手机：13681736659 </li>
+<li>邮箱：<a href="mailto:249736701@QQ.com">249736701@QQ.com</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>opencv</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>openCV 拼接高清区域</title>
     <url>/2023/03/13/opencv-stitch-hd-areas/</url>
     <content><![CDATA[<h1 id="openCV-拼接高清区域"><a href="#openCV-拼接高清区域" class="headerlink" title="openCV 拼接高清区域"></a>openCV 拼接高清区域</h1><h2 id="图例"><a href="#图例" class="headerlink" title="图例"></a>图例</h2><ul>
@@ -18,26 +38,6 @@
 <h2 id="索取"><a href="#索取" class="headerlink" title="索取"></a>索取</h2><ul>
 <li>提供python源代码</li>
 <li>手机：13681736659</li>
-<li>邮箱：<a href="mailto:249736701@QQ.com">249736701@QQ.com</a></li>
-</ul>
-]]></content>
-      <tags>
-        <tag>opencv</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>openCV 统计黑色像素比例</title>
-    <url>/2023/03/13/opencv-black-ratio/</url>
-    <content><![CDATA[<h1 id="openCV-统计黑色像素比例"><a href="#openCV-统计黑色像素比例" class="headerlink" title="openCV 统计黑色像素比例"></a>openCV 统计黑色像素比例</h1><h2 id="图例"><a href="#图例" class="headerlink" title="图例"></a>图例</h2><img src="/2023/03/13/opencv-black-ratio/img_0.png" class="">
-<h2 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h2><ul>
-<li>查找黑色区域轮廓</li>
-<li>计算轮廓内黑色占比</li>
-<li>如下图所示<img src="/2023/03/13/opencv-black-ratio/img_0-1.png" class=""></li>
-</ul>
-<h2 id="技术"><a href="#技术" class="headerlink" title="技术"></a>技术</h2><p>opencv python</p>
-<h2 id="索取"><a href="#索取" class="headerlink" title="索取"></a>索取</h2><ul>
-<li>提供python源代码</li>
-<li>手机：13681736659 </li>
 <li>邮箱：<a href="mailto:249736701@QQ.com">249736701@QQ.com</a></li>
 </ul>
 ]]></content>
