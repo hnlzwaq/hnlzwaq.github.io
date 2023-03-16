@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>adb自动链接手机ide插件</title>
+    <url>/2023/03/16/adb-auto-connect-idea-plugin/</url>
+    <content><![CDATA[<h1 id="指定手机ip列表和端口范围"><a href="#指定手机ip列表和端口范围" class="headerlink" title="指定手机ip列表和端口范围"></a>指定手机ip列表和端口范围</h1><h1 id="启动多线程，自动链接手机"><a href="#启动多线程，自动链接手机" class="headerlink" title="启动多线程，自动链接手机"></a>启动多线程，自动链接手机</h1><h2 id="菜单位置"><a href="#菜单位置" class="headerlink" title="菜单位置"></a>菜单位置</h2><img src="/2023/03/16/adb-auto-connect-idea-plugin/img.png" class="">
+
+<h2 id="配置文件"><a href="#配置文件" class="headerlink" title="配置文件"></a>配置文件</h2><img src="/2023/03/16/adb-auto-connect-idea-plugin/img_1.png" class="">
+
+<h2 id="扫描日志"><a href="#扫描日志" class="headerlink" title="扫描日志"></a>扫描日志</h2><img src="/2023/03/16/adb-auto-connect-idea-plugin/img_2.png" class="">
+
+<h2 id="链接启动按钮"><a href="#链接启动按钮" class="headerlink" title="链接启动按钮"></a>链接启动按钮</h2><img src="/2023/03/16/adb-auto-connect-idea-plugin/img_3.png" class="">
+
+<h2 id="配对界面"><a href="#配对界面" class="headerlink" title="配对界面"></a>配对界面</h2><img src="/2023/03/16/adb-auto-connect-idea-plugin/img_4.png" class="">
+
+<h2 id="索取"><a href="#索取" class="headerlink" title="索取"></a>索取</h2><ul>
+<li>提供源代码</li>
+<li>手机：13681736659</li>
+<li>邮箱：<a href="mailto:249736701@QQ.com">249736701@QQ.com</a></li>
+</ul>
+]]></content>
+      <tags>
+        <tag>ide ,android</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>openCV 统计黑色像素比例</title>
     <url>/2023/03/13/opencv-black-ratio/</url>
     <content><![CDATA[<h1 id="openCV-统计黑色像素比例"><a href="#openCV-统计黑色像素比例" class="headerlink" title="openCV 统计黑色像素比例"></a>openCV 统计黑色像素比例</h1><h2 id="图例"><a href="#图例" class="headerlink" title="图例"></a>图例</h2><img src="/2023/03/13/opencv-black-ratio/img_0.png" class="">

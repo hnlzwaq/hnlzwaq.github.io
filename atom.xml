@@ -6,7 +6,7 @@
   <link href="https://mingyue.today/atom.xml" rel="self"/>
   
   <link href="https://mingyue.today/"/>
-  <updated>2023-03-15T00:24:06.390Z</updated>
+  <updated>2023-03-16T23:04:22.372Z</updated>
   <id>https://mingyue.today/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>adb自动链接手机ide插件</title>
+    <link href="https://mingyue.today/2023/03/16/adb-auto-connect-idea-plugin/"/>
+    <id>https://mingyue.today/2023/03/16/adb-auto-connect-idea-plugin/</id>
+    <published>2023-03-16T00:11:36.000Z</published>
+    <updated>2023-03-16T23:04:22.372Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;指定手机ip列表和端口范围&quot;&gt;&lt;a href=&quot;#指定手机ip列表和端口范围&quot; class=&quot;headerlink&quot; title=&quot;指定手机ip列表和端口范围&quot;&gt;&lt;/a&gt;指定手机ip列表和端口范围&lt;/h1&gt;&lt;h1 id=&quot;启动多线程，自动链接手机&quot;&gt;&lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="ide ,android" scheme="https://mingyue.today/tags/ide-android/"/>
+    
+  </entry>
   
   <entry>
     <title>openCV 拼接高清区域</title>
